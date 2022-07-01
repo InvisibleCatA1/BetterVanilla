@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "bettervanilla:gelore"
+  },
+  "result": "bettervanilla:gelbar",
+  "experience": 2.14,
+  "cookingtime": 150
+}

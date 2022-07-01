@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " O ",
+    " O ",
+    " / "
+  ],
+  "key": {
+    "O": {
+      "item": "bettervanilla:gelbar"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "bettervanilla:gelsword"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "item.bettervanilla.structuregel": "Structure Gel",
+  "item.bettervanilla.gelore": "Gel Ore",
+  "item.bettervanilla.gelbar": "Gel Bar",
+  "item.bettervanilla.scrap": "Scrap",
+  "item.bettervanilla.arm": "Arm",
+  "item.bettervanilla.tprod": "Rod of discord",
+
+  "item.bettervanilla.gelsword": "Gel Sword",
+  "item.bettervanilla.gelscrapsword": "Gel Scrap Sword",
+
+  "item.bettervanilla.techhead": "Tech Helmet",
+  "item.bettervanilla.techchestplate": "Tech Chestplate",
+  "item.bettervanilla.techlegs": "Tech Leggings",
+  "item.bettervanilla.techboots": "Tech Boots",
+  "item.bettervanilla.temple_guard_egg": "Temple Guard Spawn Egg",
+
+  "block.bettervanilla.castlewall": "Castle Wall",
+  "block.bettervanilla.gelblock": "Gel Block",
+  "block.bettervanilla.geloreblock": "Gel Ore",
+  "block.bettervanilla.deepslategeloreblock": "Deepslate Gel Ore",
+
+  "entity.bettervanilla.temple_guard": "Temple Guard"
+}

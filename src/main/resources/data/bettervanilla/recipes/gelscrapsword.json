@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "bettervanilla:gelsword"
+  },
+  "addition": {
+    "item": "bettervanilla:tech"
+  },
+  "result": {
+    "item": "bettervanilla:gelscrapsword"
+  }
+}
