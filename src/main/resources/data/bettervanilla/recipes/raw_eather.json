@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SGS",
+    " S "
+  ],
+  "key": {
+    "G": {
+      "item": "bettervanilla:gelbar"
+    },
+    "S": {
+      "item": "bettervanilla:eather_shard"
+    }
+  },
+  "result": {
+    "item": "bettervanilla:raw_eather"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "bettervanilla:raw_eather"
+  },
+  "result": "bettervanilla:eather_ingot",
+  "experience": 4.14,
+  "cookingtime": 300
+}

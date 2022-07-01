@@ -52,12 +52,12 @@ public class OreGeneration {
         // EATHER
         ConfiguredFeature<?, ?> EATHER_ORE = Feature.ORE.configured(new OreConfiguration(
                 List.of(OreConfiguration.target(END_ORE_REPLACEABLES, BlockRegistry.EATHER_ORE.defaultBlockState())),
-        15));
+        4));
 
         PlacedFeature EATHER_ORE_FEATURE = EATHER_ORE.placed(List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(20), VerticalAnchor.absolute(60)),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(15), VerticalAnchor.absolute(25)),
                 BiomeFilter.biome()
         ));
 

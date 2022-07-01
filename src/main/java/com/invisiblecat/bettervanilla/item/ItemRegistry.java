@@ -19,11 +19,18 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class ItemRegistry {
 
     //BASIC ITEMS
-    public static final Item GEL_ORE = ItemUtils.buildBasicItem("gelore", CreativeModeTab.TAB_MATERIALS);
     public static final Item SCRAP = ItemUtils.buildBasicItem("tech", CreativeModeTab.TAB_MISC);
 
-    // Bars
+    // Ingots
     public static final Item GEL_BAR = ItemUtils.buildBasicItem("gelbar", CreativeModeTab.TAB_MATERIALS);
+    public static final Item EATHER_INGOT = ItemUtils.buildBasicItem("eather_ingot", CreativeModeTab.TAB_MATERIALS);
+
+    // Misc
+    public static final Item RAW_EATHER = ItemUtils.buildBasicItem("raw_eather.json", CreativeModeTab.TAB_MATERIALS);
+
+    // Oes
+    public static final Item GEL_ORE = ItemUtils.buildBasicItem("gelore", CreativeModeTab.TAB_MATERIALS);
+    public static final Item EATHER_SHARD = ItemUtils.buildBasicItem("eather_shard", CreativeModeTab.TAB_MATERIALS);
 
     //Foods
     public static final FoodProperties arm_properties = new FoodProperties.Builder().nutrition(6).saturationMod(1.7f).effect(new MobEffectInstance(MobEffects.CONFUSION, 500, 1), 1f).alwaysEat().build();
@@ -33,12 +40,18 @@ public class ItemRegistry {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> reg = event.getRegistry();
         //BASIC ITEMS
-        reg.register(GEL_ORE);
         reg.register(SCRAP);
 
+        // ORES
+        reg.register(GEL_ORE);
+        reg.register(EATHER_SHARD);
 
-        // ITEMS
+        // INGOTS
         reg.register(GEL_BAR);
+        reg.register(EATHER_INGOT);
+
+        // MISC
+        reg.register(RAW_EATHER);
 
         // TOOLS
         reg.register(RodOfDiscord.INSTANCE);
