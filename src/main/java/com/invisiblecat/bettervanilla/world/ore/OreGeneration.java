@@ -5,12 +5,17 @@ import com.invisiblecat.bettervanilla.block.BlockRegistry;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,8 +31,11 @@ public class OreGeneration {
     public static final ArrayList<Ore> END_ORES = new ArrayList<>();
     public static final ArrayList<Ore> SWAMP_ORES = new ArrayList<>();
 
+    public static RuleTest END_ORE_REPLACEABLES = new BlockMatchTest(Blocks.END_STONE);
+
 
     public static void registerOres() {
+        // GEL
         ConfiguredFeature<?, ?> GEL_ORE = Feature.ORE.configured(new OreConfiguration(List.of(
                 OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,
                         BlockRegistry.GEL_ORE.defaultBlockState()),
@@ -41,7 +49,20 @@ public class OreGeneration {
                 HeightRangePlacement.triangle(VerticalAnchor.absolute(-30), VerticalAnchor.absolute(8)),
                 BiomeFilter.biome()));
 
+        // EATHER
+        ConfiguredFeature<?, ?> EATHER_ORE = Feature.ORE.configured(new OreConfiguration(
+                List.of(OreConfiguration.target(END_ORE_REPLACEABLES, BlockRegistry.EATHER_ORE.defaultBlockState())),
+        15));
+
+        PlacedFeature EATHER_ORE_FEATURE = EATHER_ORE.placed(List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(20), VerticalAnchor.absolute(60)),
+                BiomeFilter.biome()
+        ));
+
         SWAMP_ORES.add(new Ore("gel_ore_feature", GEL_ORE_FEATURE, GEL_ORE));
+        END_ORES.add(new Ore("eather_ore_feature", EATHER_ORE_FEATURE, EATHER_ORE));
     }
 
 //        SWAMP_ORES.add(GEL_ORE_FEATURE);
