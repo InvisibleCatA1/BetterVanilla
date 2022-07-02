@@ -26,7 +26,7 @@ public class ItemRegistry {
     public static final Item EATHER_INGOT = ItemUtils.buildBasicItem("eather_ingot", CreativeModeTab.TAB_MATERIALS);
 
     // Misc
-    public static final Item RAW_EATHER = ItemUtils.buildBasicItem("raw_eather.json", CreativeModeTab.TAB_MATERIALS);
+    public static final Item RAW_EATHER = ItemUtils.buildBasicItem("raw_eather", CreativeModeTab.TAB_MATERIALS);
 
     // Oes
     public static final Item GEL_ORE = ItemUtils.buildBasicItem("gelore", CreativeModeTab.TAB_MATERIALS);
